@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    border-top: 25px solid #7a1d26; 
+    border-bottom: 25px solid #7a1d26;
+    position: relative; 
+    overflow: hidden;
+}
+
+.user-status {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(122, 29, 38, 0.3);
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+}
+
+.account-icon {
+    font-size: 1.6rem;
+    color: #7a1d26;
+    background: white; 
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.logout-link {
+    font-family: 'Orbitron';
+    color: #ff4d4d !important;
+    border: 2px solid #ff4d4d;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.logo-circle {
+    width: 110px;
+    height: 110px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+    border: 6px solid #7a1d26;
+    overflow: hidden;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'Orbitron';
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    min-width: 220px;
+    padding: 24px 40px;
+    background: #7a1d26;
+    color: white !important;
+    font-family: 'Orbitron';
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 800;
+}
+
+.nav-btn:hover {
+    background: #a32632;
+    transform: translateY(-8px);
+}
+
+@media (max-width: 1024px) {
+    .user-status {
+        top: 30px;
+        right: 30px;
+        gap: 12px;
+    }
+
+    .logo-container {
+        left: 25px;
+    }
+
+    .logo-circle {
+        width: 95px;
+        height: 95px;
+    }
+
+    .nav-btn {
+        min-width: 190px;
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        border-top: 15px solid #7a1d26;
+        border-bottom: 15px solid #7a1d26;
+        padding: 80px 20px 40px;
+    }
+
+    .user-status {
+        top: 20px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .user-info {
+        padding: 6px 12px;
+        font-size: 0.72rem;
+        gap: 8px;
+    }
+
+    .account-icon {
+        font-size: 1.3rem;
+    }
+
+    .logout-link {
+        padding: 6px 14px;
+        font-size: 0.68rem;
+    }
+
+    .logo-container {
+        left: 15px;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+    }
+
+    h1 {
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
+        margin-bottom: 35px;
+        letter-spacing: 2px;
+        padding: 0 10px;
+    }
+
+    .button-group {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .nav-btn {
+        min-width: 160px;
+        padding: 18px 24px;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 100px 15px 40px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .user-status {
+        top: 8px;
+        right: 10px;
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    .user-info {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+        gap: 6px;
+    }
+
+    .account-icon {
+        font-size: 1.1rem;
+    }
+
+    .logout-link {
+        padding: 5px 10px;
+        font-size: 0.6rem;
+        border-width: 1px;
+    }
+
+    .logo-container {
+        left: 10px;
+    }
+
+    .logo-circle {
+        width: 65px;
+        height: 65px;
+        border-width: 3px;
+        transform: translateY(12px);
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 6vw, 1.8rem);
+        margin-bottom: 28px;
+        letter-spacing: 1.5px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .nav-btn {
+        min-width: unset;
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 20px;
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .user-info span {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .logo-circle {
+        width: 58px;
+        height: 58px;
+    }
+}
